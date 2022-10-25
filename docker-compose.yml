@@ -1,0 +1,43 @@
+version: "3.2"
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+  web:
+    build: ./build/nginx
+    volumes:
+      - ./build/nginx/site.conf:/etc/nginx/conf.d/site.conf
+      - ./www:/var/www/html
+    environment:
+      - VIRTUAL_HOST=titansoftware.localhost
+    links:
+      - fpm
+  fpm:
+    build: ./build/php
+    volumes:
+      - ./www:/var/www/html
+    links:
+      - mysql
+
+  mysql:
+    build: ./build/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: sampledatabase
+      MYSQL_USER: usersample
+      MYSQL_PASSWORD: userpass
+    ports:
+      - "3307:3306"
+    expose:
+      - 3307
+    volumes:
+      - ./data/db:/var/lib/mysql
+
+networks:
+  default:
+    name: nginx-proxy
