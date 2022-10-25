@@ -42,6 +42,8 @@ CREATE TABLE tbl_conta_pagar (
 ```
 
 ---
+[Video Explicativo](https://drive.google.com/file/d/14SsMo4XVtfH8NoKTSzOPb6sjlOaMsQIk/view?usp=sharing "Clique para visualizar")
+---
 
 ### Pronto!
 
