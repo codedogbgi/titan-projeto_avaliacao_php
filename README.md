@@ -1,14 +1,3 @@
-# Avaliacao-PHP-MYSQL
-
-## O projeto consiste em análisar o conhecimento nas seguintes técnologias:
-
-* PHP Orientado a Objetos
-* Arquiteura MVC
-* PDO com MySql
-* Javascript ou JQuery
-
-*Obs.: Favor enviar junto com o projeto o script da criação das tabelas.*
----
 # Teste Rafael Esposo
 
 ###Rodar teste com Docker
@@ -54,6 +43,19 @@ CREATE TABLE tbl_conta_pagar (
 
 ---
 
-###Pronto!
-#####Espero que tenham gostado, qualquer dúvida ou problema estou a disposição
+### Pronto!
 
+##### Espero que tenham gostado, qualquer dúvida ou problema estou a disposição
+
+---
+
+# Avaliacao-PHP-MYSQL
+
+## O projeto consiste em análisar o conhecimento nas seguintes técnologias:
+
+- PHP Orientado a Objetos
+- Arquiteura MVC
+- PDO com MySql
+- Javascript ou JQuery
+
+## _Obs.: Favor enviar junto com o projeto o script da criação das tabelas._
